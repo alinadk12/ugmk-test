@@ -1,10 +1,11 @@
 import React from 'react';
-import { Link } from "react-router-dom";
 import { default as MuiTableBody } from '@material-ui/core/TableBody';
-import { IOrganizationRepository } from '../../models/IOrganizationRepository';
 import TableRow from '@material-ui/core/TableRow';
 import TableCell from '@material-ui/core/TableCell';
-import Button from '@material-ui/core/Button';
+import { IOrganizationRepository } from '../../models/IOrganizationRepository';
+import LinkButton from 'src/components/ui/molecules/linkButton';
+import Typography from '@material-ui/core/Typography';
+
 
 type TableBodyProps = {
   repositories: IOrganizationRepository[],
@@ -15,14 +16,14 @@ const TableBody: React.FC<TableBodyProps> = ({repositories}) => {
     <MuiTableBody>
       {repositories.map((item) => (
         <TableRow key={item.id}>
-          <TableCell>{item.name}</TableCell>
-          <TableCell>{item.description}</TableCell>
+          <TableCell>
+            <Typography variant="body1">{item.repo}</Typography>
+          </TableCell>
+          <TableCell>
+            <Typography variant="body1">{item.description}</Typography>
+          </TableCell>
           <TableCell align="center">
-            <Link to="/details">
-              <Button variant="outlined">
-                Details
-              </Button>
-            </Link>
+           <LinkButton text="Details" link="/details" params={{repo: item.repo, owner: item.owner}} />
           </TableCell>
         </TableRow>
       ))}

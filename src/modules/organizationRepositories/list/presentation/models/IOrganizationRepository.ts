@@ -1,6 +1,7 @@
 export interface IOrganizationRepository {
   id: number,
-  name: string,
+  repo: string,
   description: string | null,
   homepage: string | null,
+  owner: string,
 }

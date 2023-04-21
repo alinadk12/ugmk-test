@@ -1,7 +1,22 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import ErrorBoundary from '../../../services/errors/ErrorBoundary';
+import MainLayout from '../../../layouts/main/MainLayout';
+import DetailsView, { DetailsProvider } from 'src/modules/organizationRepositories/details';
 
 const OrgRepositoryDetails: React.FC = () => {
-  return (<div>Page One 2.0</div>);
+  useEffect(() => {
+    document.title = 'Repository Details';
+  }, []);
+
+  return (
+    <ErrorBoundary>
+      <MainLayout header="Repository Details" >
+        <DetailsProvider>
+          <DetailsView />
+        </DetailsProvider>
+      </MainLayout>
+    </ErrorBoundary>
+  );
 }
 
 export default OrgRepositoryDetails;

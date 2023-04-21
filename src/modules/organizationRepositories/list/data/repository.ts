@@ -1,4 +1,4 @@
-import { IApiService } from '../../../../services/api/models/IApiService';
+import { IApiService } from 'src/services/api/models/IApiService';
 import { API_ORGANIZATION_REPOSITORIES_LIST } from '../constants';
 import { RepositoryModel } from '../domain/models/repository/RepositoryModel';
 import { IRepository } from '../domain/models/repository/IRepository';

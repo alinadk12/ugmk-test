@@ -11,6 +11,8 @@
     "@material-ui/styles": "4.11.5",
     "@octokit/request": "6.2.3",
     "@octokit/types": "9.0.0",
+    "highcharts": "10.3.3",
+    "highcharts-react-official": "3.2.0",
     "lodash": "4.17.21",
     "material-ui": "0.20.2",
     "mobx": "6.9.0",
