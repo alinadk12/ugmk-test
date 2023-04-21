@@ -5,6 +5,8 @@ import { useDetailsContext } from '../provider';
 import WeeklyActivityChart from './components/WeeklyActivityChart';
 import Loader from 'src/components/ui/atoms/loader';
 import Title from 'src/components/ui/molecules/title';
+import TotalActivityChart from './components/TotalActivityChart';
+import NoData from 'src/modules/placeholders/noData';
 
 const DetailsView: React.FC = () => {
   const vm = useDetailsContext();
@@ -34,11 +36,16 @@ const DetailsView: React.FC = () => {
     return <Loader />;
   }
 
+  if (!vm.isLoading && !vm.weeklyCommitActivity) {
+    return <NoData />;
+  }
+
   return (
-    <>
+    <section>
       <Title>{params?.repo}</Title>
-      {vm.weeklyCommitActivity && <WeeklyActivityChart data={vm.weeklyCommitActivity} />}
-    </>
+      <WeeklyActivityChart data={vm.weeklyCommitActivity} />
+      <TotalActivityChart data={vm.weeklyCommitActivity} />
+    </section>
   );
 }
 

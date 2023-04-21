@@ -2,11 +2,9 @@ import React, { useEffect } from 'react';
 import { observer } from 'mobx-react-lite';
 import TableContainer from './components/TableContainer';
 import { useOrganizationContext } from '../provider';
-import useStyles from './styles';
 import Loader from 'src/components/ui/atoms/loader';
 
 const ListView: React.FC = () => {
-  const styles = useStyles();
   const vm = useOrganizationContext();
 
   useEffect(() => {
@@ -20,7 +18,7 @@ const ListView: React.FC = () => {
   }
 
   return (
-    <section className={styles.container}>
+    <section>
       <TableContainer repositories={vm.repositories} />
     </section>
   );

@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react';
-import { IWeeklyActivity } from '../../../domain/models/weeklyCommitActivity/IWeeklyActivity';
-import BaseLineChart from 'src/components/ui/organisms/baseLineChart/BaseLineChart';
 import Highcharts from 'highcharts';
+import { IWeeklyActivity } from '../../../domain/models/weeklyCommitActivity/IWeeklyActivity';
+import BaseChart from 'src/components/ui/organisms/baseChart/BaseChart';
 
 type WeeklyActivityChartProps = {
   data: IWeeklyActivity;
@@ -33,7 +33,7 @@ const WeeklyActivityChart: React.FC<WeeklyActivityChartProps> = ({ data }) => {
     } as Highcharts.Options
   }, [data]);
 
-  return <BaseLineChart options={options} />;
+  return <BaseChart options={options} />;
 }
 
 export default WeeklyActivityChart;

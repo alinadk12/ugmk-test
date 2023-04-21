@@ -3,10 +3,10 @@ import { Theme } from '@material-ui/core/styles';
 
 const useStyles = makeStyles<Theme>({
   wrapper: {
+    height: '50vh',
     display: 'flex',
     justifyContent: 'center',
-    alignItems: 'center',
-    marginBottom: '20px'
+    alignItems: 'center'
   }
 });
 
