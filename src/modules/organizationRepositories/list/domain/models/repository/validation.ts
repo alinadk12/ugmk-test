@@ -1,0 +1,72 @@
+import { boolean, object, number, string, array } from 'yup';
+
+export const permissionsSchema = object({
+  admin: boolean(),
+  maintain: boolean(),
+  push: boolean(),
+  triage: boolean(),
+  pull: boolean(),
+});
+
+export const ownerSchema = object({
+  name: string().nullable(),
+  email: string().nullable(),
+  login: string(),
+  id: number(),
+  node_id: string(),
+  avatar_url: string(),
+  gravatar_id: string().nullable(),
+  url: string(),
+  html_url: string(),
+  type: string(),
+  site_admin: boolean(),
+});
+
+export const licenceSchema = object({
+  key: string(),
+  name: string(),
+  url: string(),
+  spdx_id: string(),
+  node_id: string(),
+});
+
+export const repositorySchema = object({
+  allow_forking: boolean(),
+  archived: boolean(),
+  created_at: string().nullable(),
+  default_branch: string(),
+  description: string().nullable().defined(),
+  disabled: boolean(),
+  fork: boolean(),
+  forks: number(),
+  forks_count: number(),
+  full_name: string(),
+  has_discussions: boolean(),
+  has_downloads: boolean(),
+  has_issues: boolean(),
+  has_pages: boolean(),
+  has_projects: boolean(),
+  has_wiki: boolean(),
+  homepage: string().nullable().defined(),
+  id: number().required().defined(),
+  is_template: boolean(),
+  language: string().nullable(),
+  license: licenceSchema.nullable(),
+  name: string().required().defined(),
+  node_id: string(),
+  open_issues: number(),
+  open_issues_count: number(),
+  owner: ownerSchema,
+  permissions: permissionsSchema,
+  private: boolean(),
+  pushed_at: string().nullable(),
+  size: number(),
+  stargazers_count: number(),
+  topics: array().of(string()),
+  updated_at: string().nullable(),
+  url: string(),
+  visibility: string(),
+  watchers: number(),
+  watchers_count: number(),
+  web_commit_signoff_required: boolean(),
+});
