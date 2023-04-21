@@ -25,7 +25,7 @@ export const ownerSchema = object({
 export const licenceSchema = object({
   key: string(),
   name: string(),
-  url: string(),
+  url: string().nullable(),
   spdx_id: string(),
   node_id: string(),
 });

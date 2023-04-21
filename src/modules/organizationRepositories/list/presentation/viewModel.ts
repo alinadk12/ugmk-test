@@ -1,7 +1,7 @@
 import { makeObservable, observable, action, computed, toJS, runInAction } from 'mobx';
 import { IOrganizationRepository } from './models/IOrganizationRepository';
 import { IUsecases } from './models/IUsecases';
-import { LIMIT_PER_PAGE } from '../constants';
+import { LIMIT_PER_PAGE, ORGANIZATION_NAME } from '../constants';
 import { OrganizationRepositoryModel } from './models/OrganizationRepositoryModel';
 
 export class OrganizationViewModel {
@@ -9,7 +9,7 @@ export class OrganizationViewModel {
 
   @observable public isLoading: boolean = false;
   @observable public page: number = 1;
-  @observable public organization: string = 'octokit';
+  @observable public organization: string = ORGANIZATION_NAME;
 
   constructor(private usecases: IUsecases) {
     makeObservable(this);
