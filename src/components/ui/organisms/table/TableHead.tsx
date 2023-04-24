@@ -21,7 +21,7 @@ const TableHead: React.FC<TableHeadProps> = ({ titles }) => {
     <MuiTableHead>
       <TableRow>
         {titles.map((title) => (
-          <TableCell align={title.align || 'left'} classes={{ root: styles.cell }}>
+          <TableCell key={title.value} align={title.align || 'left'} classes={{ root: styles.cell }}>
             <TypographyBody1 style={{fontWeight: 'bold'}}>{title.value}</TypographyBody1>
           </TableCell>
         ))}

@@ -25,8 +25,8 @@ const TableBody: React.FC<TableBodyProps> = ({rows}) => {
     <MuiTableBody>
       {rows.map((row) => (
         <TableRow key={row.key}>
-          {row.values.map((value) => (
-            <TableCell align={value.align || 'left'} classes={{ root: styles.cell }}>
+          {row.values.map((value, index) => (
+            <TableCell key={index} align={value.align || 'left'} classes={{ root: styles.cell }}>
               {value.value}
             </TableCell>
           ))}

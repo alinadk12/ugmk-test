@@ -16,9 +16,6 @@ export class ApiOctokitService implements IApiService {
 
   public get = async (path: string, params?: Record<string, string>) => {
     return await request(`GET ${path}`, {
-      headers: {
-        authorization: `token ${process.env.REACT_APP_GIT_TOKEN}`,
-      },
       ...params,
     });
   }

@@ -26,6 +26,8 @@ export class OrganizationViewModel {
   }
 
   @action public getOrganizationRepositories = async () => {
+    if (this.isLoading) return;
+
     this.setLoading(true);
 
     try {

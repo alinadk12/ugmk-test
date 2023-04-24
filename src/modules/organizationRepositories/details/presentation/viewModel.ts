@@ -22,6 +22,8 @@ export class DetailsViewModel {
   }
 
   @action public getWeeklyCommitActivity = async (repo: string, owner: string) => {
+    if (this.isLoading) return;
+
     this.setLoading(true);
 
     try {
