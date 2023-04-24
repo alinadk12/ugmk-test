@@ -10,7 +10,7 @@ export const OrgRepositoriesList: React.FC = () => {
 
   return (
     <ErrorBoundary>
-      <MainLayout header="List Organization Repositories">
+      <MainLayout header={{ text: 'List Organization Repositories' }}>
         <OrganizationProvider>
           <ListView />
         </OrganizationProvider>

@@ -3,15 +3,15 @@ import Button, { ButtonProps } from '@material-ui/core/Button';
 import useStyles from './styles';
 
 type OutlinedButtonProps = ButtonProps & {
-  text: string,
+  children: React.ReactNode,
 }
 
-const OutlinedButton: React.FC<OutlinedButtonProps> = ({text}) => {
+const OutlinedButton: React.FC<OutlinedButtonProps> = ({ children }) => {
   const styles = useStyles();
 
   return (
     <Button variant="outlined" classes={{ root: styles.small }}>
-      {text}
+      {children}
     </Button>
   );
 }

@@ -6,6 +6,7 @@ const useStyles = makeStyles<Theme>({
     minHeight: '60px',
     padding: '5px',
     display: 'flex',
+    flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center'
   }

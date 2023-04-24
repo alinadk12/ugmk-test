@@ -10,7 +10,7 @@ const OrgRepositoryDetails: React.FC = () => {
 
   return (
     <ErrorBoundary>
-      <MainLayout header="Repository Details" >
+      <MainLayout header={{ text: 'Repository Details', isShowBack: true }} >
         <DetailsProvider>
           <DetailsView />
         </DetailsProvider>

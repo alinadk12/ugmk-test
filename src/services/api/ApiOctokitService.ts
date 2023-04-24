@@ -1,7 +1,7 @@
 import { request } from '@octokit/request';
 import { IApiService } from './models/IApiService';
 
-const GIT_TOKEN = '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';
+const GIT_TOKEN = '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';
 
 export class ApiOctokitService implements IApiService {
   private static _instance: ApiOctokitService;

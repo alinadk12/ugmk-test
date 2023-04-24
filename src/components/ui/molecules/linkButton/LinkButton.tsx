@@ -23,7 +23,7 @@ const LinkButton: React.FC<LinkButtonProps> = (props) => {
 
   return (
     <Link to={fullLink}>
-      <OutlinedButton text={text} />
+      <OutlinedButton>{text}</OutlinedButton>
     </Link>
   )
 }

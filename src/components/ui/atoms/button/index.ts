@@ -1,3 +1,4 @@
 import OutlinedButton from './OutlinedButton';
+import TextButton from './TextButton';
 
-export { OutlinedButton };
+export { OutlinedButton, TextButton };

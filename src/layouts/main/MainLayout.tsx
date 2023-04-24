@@ -1,10 +1,10 @@
 import React from 'react';
-import Header from 'src/modules/header/Header';
+import Header, { IHeader } from 'src/modules/header/Header';
 import useStyles from './styles';
 
 type MainLayoutProps = {
   children: React.ReactNode,
-  header: string,
+  header: IHeader,
 };
 
 const MainLayout: React.FC<MainLayoutProps> = ({children, header}) => {
@@ -12,7 +12,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({children, header}) => {
 
   return (
     <div className={styles.body}>
-      <Header text={header} />
+      <Header {...header} />
       <main className={styles.main}>
         <div className={styles.container}>
           {children}
