@@ -27,7 +27,7 @@ const TableContainer: React.FC<TableContainerProps> = ({repositories}) => {
   })), [repositories]);
 
   return (
-    <Paper>
+    <Paper style={{ overflowX: 'auto' }}>
       <Table titles={titles} rows={rows} />
     </Paper>
   );

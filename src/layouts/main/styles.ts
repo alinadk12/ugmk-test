@@ -4,14 +4,14 @@ import { Theme } from '@material-ui/core/styles';
 const useStyles = makeStyles<Theme>((theme) => ({
   body: {
     width: '100%',
-    minHeight: 'calc(100vh - 12px)'
+    display: 'flex',
+    flexDirection: 'column',
+    minHeight: '100vh',
+    backgroundColor: theme.palette.backgroundPrimary,
   },
 
   main: {
-    width: '100%',
-    minHeight: 'calc(100vh - 120px)',
     padding: '24px',
-    backgroundColor: theme.palette.backgroundPrimary,
 
     [theme.breakpoints.between('sm', 'md')]: {
       padding: '16px',
@@ -29,7 +29,7 @@ const useStyles = makeStyles<Theme>((theme) => ({
       width: '720px',
     },
     [theme.breakpoints.down('sm')]: {
-      width: '100%',
+      width: '96%',
     },
   }
 }));

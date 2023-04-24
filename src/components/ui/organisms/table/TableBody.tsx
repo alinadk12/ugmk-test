@@ -2,6 +2,7 @@ import React from 'react';
 import { default as MuiTableBody } from '@material-ui/core/TableBody';
 import TableRow from '@material-ui/core/TableRow';
 import TableCell, { TableCellProps } from '@material-ui/core/TableCell';
+import useStyles from './styles';
 
 interface IValue {
   value: string | JSX.Element,
@@ -18,12 +19,14 @@ type TableBodyProps = {
 };
 
 const TableBody: React.FC<TableBodyProps> = ({rows}) => {
+  const styles = useStyles();
+
   return (
     <MuiTableBody>
       {rows.map((row) => (
         <TableRow key={row.key}>
           {row.values.map((value) => (
-            <TableCell align={value.align || 'left'}>
+            <TableCell align={value.align || 'left'} classes={{ root: styles.cell }}>
               {value.value}
             </TableCell>
           ))}
