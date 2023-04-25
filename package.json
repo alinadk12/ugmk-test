@@ -40,8 +40,9 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "docker:build": "docker build -t alinadk12/ugmk-test .",
+    "docker:run": "docker container run -it -d -p 3000:3000 --name ugmk-test --rm alinadk12/ugmk-test",
+    "docker:stop": "docker container stop ugmk-test"
   },
   "eslintConfig": {
     "extends": [
