@@ -2,7 +2,7 @@ import React from 'react';
 
 const CommonError: React.FC = () => {
   return (
-    <div>Something error</div>
+    <div>Something went wrong</div>
   );
 }
 

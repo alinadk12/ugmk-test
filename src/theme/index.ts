@@ -1,4 +1,4 @@
-import { createTheme } from '@material-ui/core/styles'
+import { createTheme } from '@mui/material/styles';
 
 const neutral = {
   neutral10: '#1A1A1A',
@@ -38,43 +38,6 @@ const palette = {
 
 const theme = createTheme({
   palette: {...palette},
-  overrides: {
-    MuiCssBaseline: {
-      '@global': {
-        body: {
-          backgroundColor: palette.neutral100,
-          overflow: 'auto',
-          '&.locked': {
-            overflow: 'hidden'
-          }
-        },
-        '*': {
-          scrollbarWidth: 'thin',
-          scrollbarColor: `${palette.neutral80} transparent`
-        },
-        '*::-webkit-scrollbar': {
-          width: '8px',
-          height: '8px'
-        },
-        '*::-webkit-scrollbar-track': {
-          backgroundColor: 'transparent'
-        },
-        '*::-webkit-scrollbar-thumb': {
-          backgroundColor: palette.neutral80,
-          borderRadius: '32px',
-          '&:hover': {
-            backgroundColor: palette.neutral70,
-            cursor: 'pointer'
-          }
-        },
-        '::-webkit-scrollbar-button': {
-          width: '0',
-          height: '0',
-          marginRight: '4px'
-        },
-      }
-    },
-  }
 })
 
 export default theme
