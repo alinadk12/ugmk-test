@@ -1,8 +1,8 @@
 import React from 'react';
-import { default as MuiTableHead } from '@material-ui/core/TableHead';
-import TableRow from '@material-ui/core/TableRow';
-import TableCell, { TableCellProps } from '@material-ui/core/TableCell';
-import { TypographyBody1 } from 'src/components/ui/atoms/typography'
+import { default as MuiTableHead } from '@mui/material/TableHead';
+import TableRow from '@mui/material/TableRow';
+import TableCell, { TableCellProps } from '@mui/material/TableCell';
+import Text from 'src/components/ui/atoms/text/Text'
 import useStyles from './styles';
 
 export interface ITitle {
@@ -19,10 +19,10 @@ const TableHead: React.FC<TableHeadProps> = ({ titles }) => {
 
   return (
     <MuiTableHead>
-      <TableRow>
+      <TableRow className={styles.sm}>
         {titles.map((title) => (
-          <TableCell key={title.value} align={title.align || 'left'} classes={{ root: styles.cell }}>
-            <TypographyBody1 style={{fontWeight: 'bold'}}>{title.value}</TypographyBody1>
+          <TableCell key={title.value} align={title.align || 'left'}>
+            <Text style={{fontWeight: 'bold'}}>{title.value}</Text>
           </TableCell>
         ))}
       </TableRow>

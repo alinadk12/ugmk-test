@@ -1,5 +1,5 @@
 import React from 'react';
-import { TypographyH4 } from '../../atoms/typography';
+import TextH4 from '../../atoms/text/TextH4';
 import useStyles from './styles';
 
 type TitleProps = {
@@ -11,9 +11,9 @@ const Title: React.FC<TitleProps> = ({children}) => {
 
   return (
     <div className={styles.wrapper}>
-      <TypographyH4>
+      <TextH4>
         {children}
-      </TypographyH4>
+      </TextH4>
     </div>
   )
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import { default as MuiTable } from '@material-ui/core/Table';
+import { default as MuiTable } from '@mui/material/Table';
 import TableHead, { ITitle } from './TableHead';
 import TableBody, { IRow } from './TableBody';
 

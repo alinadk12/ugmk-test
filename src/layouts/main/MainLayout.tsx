@@ -1,5 +1,5 @@
 import React from 'react';
-import Header, { IHeader } from 'src/modules/header/Header';
+import Header, { IHeader } from '../header/Header';
 import useStyles from './styles';
 
 type MainLayoutProps = {

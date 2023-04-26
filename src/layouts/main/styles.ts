@@ -1,5 +1,5 @@
-import makeStyles from '@material-ui/styles/makeStyles';
-import { Theme } from '@material-ui/core/styles';
+import makeStyles from '@mui/styles/makeStyles';
+import { Theme } from '@mui/material/styles';
 
 const useStyles = makeStyles<Theme>((theme) => ({
   body: {
@@ -22,11 +22,11 @@ const useStyles = makeStyles<Theme>((theme) => ({
   },
 
   container: {
-    width: '960px',
+    maxWidth: '960px',
     margin: '0 auto',
 
     [theme.breakpoints.between('sm', 'md')]: {
-      width: '720px',
+      maxWidth: '720px',
     },
     [theme.breakpoints.down('sm')]: {
       width: '96%',

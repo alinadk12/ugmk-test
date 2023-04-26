@@ -1,11 +1,13 @@
-import makeStyles from '@material-ui/styles/makeStyles';
-import { Theme } from '@material-ui/core/styles';
+import makeStyles from '@mui/styles/makeStyles';
+import { Theme } from '@mui/material/styles';
 
 const useStyles = makeStyles<Theme>((theme) => ({
-  cell: {
-    [theme.breakpoints.down('sm')]: {
-      padding: '8px',
-    },
+  sm: {
+    '& > td, & > th': {
+      [theme.breakpoints.down('sm')]: {
+        padding: '8px'
+      },
+    }
   }
 }));
 
